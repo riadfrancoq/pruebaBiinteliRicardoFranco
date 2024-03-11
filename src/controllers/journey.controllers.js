@@ -1,0 +1,1 @@
+import journeyModel from './models/Journey.model.js';
