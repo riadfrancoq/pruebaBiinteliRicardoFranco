@@ -4,6 +4,7 @@ import { config } from 'dotenv';
 import DatabaseConnection from './db/db.js';
 import { configDB } from './config/config.js';
 import transportRoute from './api/routes/transport.routes.js';
+import flightRoute from './api/routes/flight.routes.js';
 
 const {MONGO_URI, PORT} = configDB;
 config();
@@ -24,7 +25,7 @@ class Server {
 
     routes() {
         this.app.use(this.api, transportRoute);
-        //this.app.use(this.api, );
+        this.app.use(this.api, flightRoute);
     }
 
     listen() {

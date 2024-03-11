@@ -1,6 +1,6 @@
 import transportModel from '../../../domain/models/transport.model.js';
 
-class transportController {
+class TransportController {
 
     async getTransports(req, res) {
         try {
@@ -39,4 +39,4 @@ class transportController {
 
 };
 
-export default transportController;
+export default TransportController;

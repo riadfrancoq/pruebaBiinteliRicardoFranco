@@ -1,7 +1,11 @@
-import { Schema, model} from "mongoose";
+import { Schema, model, Types} from "mongoose";
 
 const flight = Schema({
-
+    transport: {
+        type: Types.ObjectId,
+        ref: "transports",
+        required: [true, "transport is required"]
+    },
     origin: {
         type: String,
         required: [true, 'origin is required']
