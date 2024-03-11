@@ -2,6 +2,6 @@
 
 > las queries estaran en la siguiente coleccion de postman
 
-[POSTMAN]()
+[POSTMAN](https://github.com/riadfrancoq/pruebaBiinteliRicardoFranco/blob/main/Biinteli.postman_collection.json)
 
 
