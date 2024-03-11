@@ -6,7 +6,7 @@ import { configDB } from './config/config.js';
 import transportRoute from './api/routes/transport.routes.js';
 import flightRoute from './api/routes/flight.routes.js';
 import journeyRoute from './api/routes/journey.routes.js';
-
+import rateLimitMiddleware from './api/middleware/rate.limiter.js';
 const {MONGO_URI, PORT} = configDB;
 config();
 class Server {
@@ -22,6 +22,7 @@ class Server {
     middlewares() {
         this.app.use(express.json());
         this.app.use(cors());
+        this.app.use(rateLimitMiddleware);
     }
 
     routes() {
