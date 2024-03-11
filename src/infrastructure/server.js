@@ -3,7 +3,7 @@ import cors from 'cors';
 import { config } from 'dotenv';
 import DatabaseConnection from './db/db.js';
 import { configDB } from './config/config.js';
-import transportRoute from './routes/transport.routes.js';
+import transportRoute from './api/routes/transport.routes.js';
 
 const {MONGO_URI, PORT} = configDB;
 config();

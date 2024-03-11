@@ -1,4 +1,4 @@
-import transportModel from '../models/transport.model.js';
+import transportModel from '../../../domain/models/transport.model.js';
 
 class transportController {
 
