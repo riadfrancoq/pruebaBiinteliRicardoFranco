@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "b8562fb0-df0c-4b1f-9b70-18d1437d8aca",
+		"name": "Biinteli",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31703929"
+	},
+	"item": [
+		{
+			"name": "get Test",
+			"item": [
+				{
+					"name": "rutas unicas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bitecingcom.ipage.com/testapi/basico.js",
+							"protocol": "https",
+							"host": [
+								"bitecingcom",
+								"ipage",
+								"com"
+							],
+							"path": [
+								"testapi",
+								"basico.js"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rutas multiples",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bitecingcom.ipage.com/testapi/intermedio.js",
+							"protocol": "https",
+							"host": [
+								"bitecingcom",
+								"ipage",
+								"com"
+							],
+							"path": [
+								"testapi",
+								"intermedio.js"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rutas multiples y de retorno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bitecingcom.ipage.com/testapi/avanzado.js",
+							"protocol": "https",
+							"host": [
+								"bitecingcom",
+								"ipage",
+								"com"
+							],
+							"path": [
+								"testapi",
+								"avanzado.js"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transports",
+			"item": [
+				{
+					"name": "transports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/transports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transport",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flightCarrier\": \"AV\",\n    \"flightNumber\": 8001\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/transports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transports"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "flights",
+			"item": [
+				{
+					"name": "flights",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/transports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transport\": \"65ee6e5e1c73c5ad760d649f\",\n    \"origin\":\"MTR\",\n    \"destination\": \"BGA\",\n    \"price\": 150\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/flights",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"flights"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "journeys",
+			"item": [
+				{
+					"name": "journeys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/journeys",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"journeys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "journey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"origin\":\"IBE\",\n    \"destination\": \"EYP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/journeys",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"journeys"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

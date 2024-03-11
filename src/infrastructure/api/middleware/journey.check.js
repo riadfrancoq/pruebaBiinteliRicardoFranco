@@ -16,7 +16,6 @@ export default class JourneyCheck {
                 }
 
             });
-            console.log(checkJourneys)
             if (checkJourneys.length > 0 ) {
                 return res.status(200).json({
                     message: "Journey already exists ",
