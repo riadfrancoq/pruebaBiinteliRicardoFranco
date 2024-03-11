@@ -158,7 +158,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"transport\": \"65ee6e5e1c73c5ad760d649f\",\n    \"origin\":\"MTR\",\n    \"destination\": \"BGA\",\n    \"price\": 150\n}",
+							"raw": "{\n    \"transport\": \"65ee6e5e1c73c5ad760d649f\",\n    \"origin\":\"EYP\",\n    \"destination\": \"MTR\",\n    \"price\": 150\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -212,7 +212,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"origin\":\"IBE\",\n    \"destination\": \"EYP\"\n}",
+							"raw": "{\n    \"origin\":\"BOG\",\n    \"destination\": \"AXM\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"

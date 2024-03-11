@@ -41,11 +41,50 @@ class JourneyController {
                     message: "Journey created successfully",
                     result: findCreatedJourney
                 });
+            } else {
+                const pipeline = [
+                    {
+                        $match: {
+                            $or: [
+                                { origin: origin },
+                                { destination: destination }
+                            ]
+                        }
+                    },
+                    {
+                        $group: {
+                            _id: null,
+                            flights: { $push: "$$ROOT" }
+                        }
+                    },
+                    {
+                        $project: {
+                            _id: 0,
+                            flights: {
+                                $filter: {
+                                    input: "$flights",
+                                    as: "flight",
+                                    cond: {
+                                        $or: [
+                                            { $eq: [ "$$flight.origin", origin ] },
+                                            { $eq: [ "$$flight.destination", destination ] }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ];
+                
+                const flightsJourney = await flightModel.aggregate(pipeline);
+                
+                        return res.status(201).json({
+                            message: "Journeys Succesfully Gathered",
+                            result: flightsJourney.slice(Math.max(flightsJourney.length - 2, 0))
+                        });
+
             };
-            return res.status(404).json({
-                message: "There aren't flights for this Journey",
-                result: []
-            });
+
 
         } catch (error) {
             console.log(error);

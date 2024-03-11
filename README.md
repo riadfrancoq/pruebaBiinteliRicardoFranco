@@ -6,8 +6,6 @@
 
 ### Como correr el programa? 🤔
 
-
-
 ```bash
 git clone git@github.com:riadfrancoq/pruebaBiinteliRicardoFranco.git
 cd pruebaBiinteliRicardoFranco
