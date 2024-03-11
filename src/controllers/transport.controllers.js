@@ -4,8 +4,10 @@ class transportController {
 
     async getTransports(req, res) {
         try {
+            const transports = await transportModel.find({});
             res.status(200).json({
-                result: "sexo"
+                message: "Transports where gathered succesfully",
+                result: transports
             });
         } catch (error) {
             console.log(error);
@@ -15,7 +17,23 @@ class transportController {
         }
     };
 
-    async postTransport() {
+    async postTransport(req, res) {
+        try {
+            const {flightCarrier, flightNumber} = req.body;
+
+            const newTransport = new transportModel({flightCarrier, flightNumber});
+            await newTransport.save();
+            res.status(201).json({
+                message: "Transport was created succesfully",
+                result: newTransport
+            });
+
+        } catch (error) {
+            console.log(error);
+            res.status(404).json({
+                message: "Oops something went wrong"
+            });
+        }
 
     }
 
